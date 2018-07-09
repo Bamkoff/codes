@@ -1,0 +1,61 @@
+.background
+{
+	background-color:#E4E4E4;
+}
+
+.pad-right
+{
+	padding-right:8px;
+}
+.pad-right-more
+{
+	padding-right:40px;
+}
+.pad-top
+{
+	padding-top:50px;
+	position:relative;
+}
+.pad-top-more
+{
+	padding-top:100px;
+}
+.text-white
+{
+	color:#FFFFFF;
+	font-size: 15px;
+}
+.text-black
+{
+	color:#000000;
+}
+.float-right
+{
+	float:right;
+}
+.back-black
+{
+	background-color:#000000;
+}
+.back-grey
+{
+	background-color:#202020;
+}
+.border-black
+{
+	border:#A0A0A0;
+}
+.img-size-fix
+{
+	width:140px;
+	height:140px;
+	display:inline;
+}
+.pad-zero
+{
+	padding: 0px 0px 0px 0px;
+}
+nav-color-grey
+{
+	backgroud-color:#404040;
+}

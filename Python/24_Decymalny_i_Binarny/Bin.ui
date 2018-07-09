@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Converter</class>
+ <widget class="QWidget" name="Converter">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>379</width>
+    <height>215</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QPushButton" name="Zakoncz">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>180</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Zakończ</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Przelicz">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>160</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Przelicz</string>
+   </property>
+  </widget>
+  <widget class="QTextBrowser" name="Na">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>110</y>
+     <width>161</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="Dec">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>30</y>
+     <width>82</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Dec</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="Bin">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>50</y>
+     <width>82</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Bin</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>10</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Zamiana na:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>90</y>
+     <width>91</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Tu wpisz wartość</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>90</y>
+     <width>71</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Jej zamiana:</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="Z">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>110</y>
+     <width>161</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>Zakoncz</sender>
+   <signal>clicked()</signal>
+   <receiver>Converter</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>323</x>
+     <y>259</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>361</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Zakoncz</sender>
+   <signal>clicked()</signal>
+   <receiver>Converter</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>303</x>
+     <y>187</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>273</x>
+     <y>188</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

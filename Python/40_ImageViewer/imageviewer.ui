@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ImageViewer</class>
+ <widget class="QWidget" name="ImageViewer">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>484</width>
+    <height>409</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QGraphicsView" name="Image">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>-10</y>
+     <width>461</width>
+     <height>351</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="right">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>340</y>
+     <width>251</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&gt;</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="left">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>340</y>
+     <width>241</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>380</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Zamknij</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>ImageViewer</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>414</x>
+     <y>392</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>377</x>
+     <y>396</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

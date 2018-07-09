@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="2.5" type="template" client="site">
+	<name>Szablon_galerii_ver3_5</name>
+	<creationDate>2016-06-14</creationDate>
+	<author>Bartosz Fabisiak</author>
+	
+	<license>GNU General Public License version 2 </license>
+	<version>1.0.0</version>
+	<description>szablon</description>	
+	
+	<files>
+		<folder>images</folder>
+		<folder>css</folder>
+		<folder>fonts</folder>
+		<folder>js</folder>
+		<filename>index.html</filename>		
+		<filename>index.php</filename>	
+		<filename>templateDetails.xml</filename>
+	</files>
+	
+	<positions>
+		<position>gora-srodek</position>
+		<position>dol-lewo</position>
+		<position>dol-srodek</position>
+		<position>dol-prawo</position>
+	</positions>
+</extension>

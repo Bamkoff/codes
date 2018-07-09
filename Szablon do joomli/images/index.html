@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="PL-pl">
+<!-------------------------------------------------------------------------------------------------------------------------------->  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="Grafika, Studio, Studio Graficzne, Grafiki, Zdjęcia">
+	<meta name="description" content="Witryna studia graficznego">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+  </head>
+<!--Menu--------------------------------------------------------------------------------------------------------------------------------->  
+  <body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+	 <div class="container">
+		<div class="cotainer-fluid">
+			<div class="navbar-header">
+				<button class="btn navbar-btn"><a href="#"><span class="glyphicon glyphicon-home"></span></a></button>
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+		</div>
+	 <div class="collapse navbar-collapse float-right" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+		<li class="pad-right"><button class="btn btn-primary navbar-btn"><a href="#"><span class="text-white" >O firmie</span></a></button></li>
+        <li class="pad-right"><button class="btn btn-primary navbar-btn"><a href="#"><span class="text-white" >Zespół</span></a></button></li>
+        <li class="pad-right"><button class="btn btn-primary navbar-btn"><a href="#"><span class="text-white" >Portfolio</span></a></button></li>
+		<li class="pad-right"><button class="btn btn-primary navbar-btn"><a href="#"><span class="text-white" >Kontakt</span></a></button></li>
+		<li><button class="btn btn-primary navbar-btn"><a href="#"><span class="text-white" >Aktualności</span></a></button></li>
+      </ul>
+	 </div>
+	 </div>
+	</nav>
+<!--Nagłówek----------------------------------------------------------------------------------------------------------------------------------------------->
+	<div class="container">
+		<div class="row pad-top">
+			<div class="col-xm-12 col-sm-12 col-md-4 col-lg-4 pad-top">
+				<jdoc:include type="modules" name="góra-prawo" style="xhtml" />
+				góra-prawo
+			</div>	
+			<div class="col-xm-12 col-sm-6 col-md-4 col-lg-4 pad-top">
+				<jdoc:include type="modules" name="góra-środek" style="xhtml" />
+				góra-środek
+			</div>	
+			<div class="col-xm-12 col-sm-6 col-md-4 col-lg-4 pad-top">
+				<jdoc:include type="modules" name="góra-prawa" style="xhtml" />
+				góra-prawa
+			</div>	
+		</div>
+	</div>
+<!--środek------------------------------------------------------------------------------------------------------------------------------------------------------>	
+	<div class="container-fluid">
+		<div class="row pad-top">	
+			<div class="col-xm-6 col-md-2 col-sm-6 col-lg-2">
+				<div class="pad-top">
+					<jdoc:include type="modules" name="środek-lewo1" style="xhtml" />
+					środek-lewo1
+				</div>
+				<div class="pad-top">
+					<jdoc:include type="modules" name="środek-lewo2" style="xhtml" />
+					środek-lewo2
+				</div>
+				<div class="pad-top">
+					<jdoc:include type="modules" name="środek-lewo3" style="xhtml" />
+					środek-lewo3
+				</div>
+			</div>	
+			<div class="col-xm-12 col-sm-12 col-md-8 col-lg-8 pad-top">
+				<jdoc:include type="component"/>
+				Artykóły
+			</div>	
+			<div class="col-xm-6 col-md-2 col-sm-6 col-lg-2">
+				<div class="pad-top">
+					<jdoc:include type="modules" name="środek-środek1" style="xhtml" />
+					środek-środek1
+				</div>
+				<div class="pad-top">
+					<jdoc:include type="modules" name="środek-środek2" style="xhtml" />
+					środek-środek2
+				</div>
+				<div class="pad-top">
+					<jdoc:include type="modules" name="środek-środek3" style="xhtml" />
+					środek-środek3
+				</div>
+			</div>
+		</div>
+	</div>
+<!-Stopka------------------------------------------------------------------------------------------------------------------------------------------------------->	
+	<div class="container">
+		<div class="row pad-top">
+			<div class="col-xm-12 col-sm-12 col-md-4 col-lg-4 pad-top">
+				<jdoc:include type="modules" name="dół-lewo" style="xhtml" />
+				dół-lewo
+			</div>	
+			<div class="col-xm-12 col-sm-6 col-md-4 col-lg-4 pad-top">
+				<jdoc:include type="modules" name="dół-środek" style="xhtml" />
+				dół-środek
+			</div>	
+			<div class="col-xm-12 col-sm-6 col-md-4 col-lg-4 pad-top">
+				<jdoc:include type="modules" name="dół-prawo" style="xhtml" />
+				dół-prawo
+			</div>	
+		</div>
+	</div>
+<!----------------------------------------------------------------------------------------------------------------------------------->	
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

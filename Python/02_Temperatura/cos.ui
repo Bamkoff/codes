@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>cos</class>
+ <widget class="QWidget" name="cos">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>350</width>
+    <height>246</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QRadioButton" name="P_cel">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>50</y>
+     <width>82</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Celcjusze</string>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">Z</string>
+   </attribute>
+  </widget>
+  <widget class="QRadioButton" name="P_fah">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>70</y>
+     <width>82</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Fahrenheity</string>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">Z</string>
+   </attribute>
+  </widget>
+  <widget class="QRadioButton" name="P_kel">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>90</y>
+     <width>82</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Kelwiny</string>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">Z</string>
+   </attribute>
+  </widget>
+  <widget class="QRadioButton" name="W_cel">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>50</y>
+     <width>82</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Celcjusze</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">Na</string>
+   </attribute>
+  </widget>
+  <widget class="QRadioButton" name="W_fah">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>70</y>
+     <width>82</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Fahrenheity</string>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">Na</string>
+   </attribute>
+  </widget>
+  <widget class="QRadioButton" name="W_kel">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>90</y>
+     <width>82</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Kelwiny</string>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">Na</string>
+   </attribute>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>210</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="text">
+    <string>Oblicz</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>20</y>
+     <width>46</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Z czego?</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>20</y>
+     <width>46</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Na co?</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>140</y>
+     <width>71</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Temperatura</string>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="doubleSpinBox">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>160</y>
+     <width>91</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>IBeamCursor</cursorShape>
+   </property>
+   <property name="buttonSymbols">
+    <enum>QAbstractSpinBox::NoButtons</enum>
+   </property>
+   <property name="minimum">
+    <double>-1000.000000000000000</double>
+   </property>
+   <property name="maximum">
+    <double>1000.000000000000000</double>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>40</y>
+     <width>120</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame_2">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>40</y>
+     <width>120</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Zakoncz">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>210</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Zakończ</string>
+   </property>
+  </widget>
+  <widget class="QTextBrowser" name="textBrowser">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>160</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>140</y>
+     <width>46</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Po Zamianie</string>
+   </property>
+  </widget>
+  <zorder>frame</zorder>
+  <zorder>frame_2</zorder>
+  <zorder>P_cel</zorder>
+  <zorder>P_fah</zorder>
+  <zorder>P_kel</zorder>
+  <zorder>W_cel</zorder>
+  <zorder>W_fah</zorder>
+  <zorder>W_kel</zorder>
+  <zorder>pushButton</zorder>
+  <zorder>label</zorder>
+  <zorder>label_2</zorder>
+  <zorder>label_3</zorder>
+  <zorder>doubleSpinBox</zorder>
+  <zorder>Zakoncz</zorder>
+  <zorder>textBrowser</zorder>
+  <zorder>label_4</zorder>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>Zakoncz</sender>
+   <signal>clicked()</signal>
+   <receiver>cos</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>194</x>
+     <y>214</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>130</x>
+     <y>227</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <buttongroups>
+  <buttongroup name="Na"/>
+  <buttongroup name="Z"/>
+ </buttongroups>
+</ui>
