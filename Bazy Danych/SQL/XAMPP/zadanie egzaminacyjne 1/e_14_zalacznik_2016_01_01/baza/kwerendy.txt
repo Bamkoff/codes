@@ -1,0 +1,15 @@
+a)
+SELECT Tytul
+FROM ksiazki
+WHERE wydawnictwo LIKE "Ossolineum";
+
+
+b)
+SELECT Tytul,nazwisko
+FROM ksiazki INNER JOIN autorzy ON ksiazki.AutorID = autorzy.IDAutor;
+
+
+c)
+SELECT IDEgzemplarz,tytul
+FROM egzemplarze INNER JOIN ksiazki ON egzemplarze.KsiazkaID = ksiazki.IDKsiazki
+WHERE DoWypozyczenia = 0;
