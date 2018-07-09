@@ -1,0 +1,57 @@
+BACI System: C-- to PCODE Compiler in C, 11:47  23 Oct 2007
+Source file: zad1.cm  Tue Dec 12 11:56:19 2017
+ line  pc
+   1    0  semaphore pusty;
+   2    0  semaphore pelny;
+   3    0  
+   4    0  const int N = 5;
+   5    0  int buffer[N];
+   6    0  int write_pos = 0;
+   7    0  int read_pos = 0;
+   8    0  void queue_add(int item)
+   9    0  {
+  10    0          buffer[write_pos] = item;
+  11    5          write_pos = (write_pos + 1) % N;
+  12   12  }
+  13   13  
+  14   13  int queue_get()
+  15   13  {
+  16   13          int item;
+  17   13          item = buffer[read_pos];
+  18   19          read_pos = (read_pos + 1) % N;
+  19   26          return item;
+  20   30  }
+  21   31  
+  22   31  void producent(void) 
+  23   31  {	
+  24   31  	int p=1;
+  25   34  	for(;p<51;p++)
+  26   45  	{	
+  27   45  		wait(pusty);
+  28   47          queue_add(p);        
+  29   51  		signal(pelny);
+  30   53  	}
+  31   54  }
+  32   55  
+  33   55  void konsument(void)
+  34   55  {	
+  35   55  	int l=0;
+  36   58  	for(;l<50;l++)
+  37   69  	{
+  38   69  		wait(pelny);
+  39   71  		cout<<queue_get()<<endl;
+  40   76  		signal(pusty);
+  41   78  	}
+  42   79  }
+  43   80  
+  44   80  main() 
+  45   81  {
+  46   81      initialsem(pelny,0);
+  47   84  	initialsem(pusty,5);
+  48   87  	
+  49   87  	cobegin { 
+  50   88               producent(); konsument();  
+  51   94          } 
+  52   95          
+  53   95          cout << "All processes finished" << endl; 
+  54   97  }

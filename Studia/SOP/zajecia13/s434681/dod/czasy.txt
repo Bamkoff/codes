@@ -1,0 +1,12 @@
+czas przesyłu pamięcią współdzieloną:
+real	1m12.069s
+user	0m0.800s
+sys	0m2.520s
+
+czas przesyłu kolejkami priorytetowymi:
+real	0m59.748s
+user	0m0.520s
+sys	0m2.032s
+
+
+Możliwe, że gdyby zmniejszyć czas czekania procesów po nieudanej próbie połączenia do pamięci współdzielonej to te procesy wykonywały by sie szybciej.

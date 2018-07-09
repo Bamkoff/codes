@@ -1,0 +1,54 @@
+semaphore pusty;
+semaphore pelny;
+
+const int N = 5;
+int buffer[N];
+int write_pos = 0;
+int read_pos = 0;
+void queue_add(int item)
+{
+        buffer[write_pos] = item;
+        write_pos = (write_pos + 1) % N;
+}
+
+int queue_get()
+{
+        int item;
+        item = buffer[read_pos];
+        read_pos = (read_pos + 1) % N;
+        return item;
+}
+
+void producent(void) 
+{	
+	int p=1;
+	for(;p<51;p++)
+	{	
+		wait(pusty);
+        queue_add(p);        
+		signal(pelny);
+	}
+}
+
+void konsument(void)
+{	
+	int l=0;
+	for(;l<50;l++)
+	{
+		wait(pelny);
+		cout<<queue_get()<<endl;
+		signal(pusty);
+	}
+}
+
+main() 
+{
+    initialsem(pelny,0);
+	initialsem(pusty,5);
+	
+	cobegin { 
+             producent(); konsument();  
+        } 
+        
+        cout << "All processes finished" << endl; 
+}

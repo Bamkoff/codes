@@ -1,0 +1,76 @@
+BACI System: C-- to PCODE Compiler in C, 11:47  23 Oct 2007
+Source file: zad1.cm  Tue Dec 12 13:21:40 2017
+ line  pc
+   1    0  semaphore pusty;
+   2    0  semaphore pelny;
+   3    0  binarysem guard;
+   4    0  
+   5    0  const int N = 5;
+   6    0  int buffer[N];
+   7    0  int write_pos = 0;
+   8    0  int read_pos = 0;
+   9    0  void queue_add(int item)
+  10    0  {
+  11    0          buffer[write_pos] = item;
+  12    5          write_pos = (write_pos + 1) % N;
+  13   12  }
+  14   13  
+  15   13  int queue_get()
+  16   13  {
+  17   13          int item;
+  18   13          item = buffer[read_pos];
+  19   19          read_pos = (read_pos + 1) % N;
+  20   26          return item;
+  21   30  }
+  22   31  
+  23   31  void producent1(void) 
+  24   31  {	
+  25   31  	int p=1;
+  26   34  	for(;p<51;p++)
+  27   45  	{	
+  28   45  		wait(pusty);
+  29   47  		wait(guard);
+  30   49          queue_add(p);
+  31   53  		signal(guard);        
+  32   55  		signal(pelny);
+  33   57  	}
+  34   58  }
+  35   59  
+  36   59  void producent2(void) 
+  37   59  {	
+  38   59  	int p=101;
+  39   62  	for(;p<151;p++)
+  40   73  	{	
+  41   73  		wait(pusty);
+  42   75  		wait(guard);        
+  43   77  		queue_add(p); 
+  44   81  		signal(guard);       
+  45   83  		signal(pelny);
+  46   85  	}
+  47   86  }
+  48   87  
+  49   87  void konsument(void)
+  50   87  {	
+  51   87  	int l=0;
+  52   90  	for(;l<100;l++)
+  53  101  	{
+  54  101  		wait(pelny);
+  55  103  		wait(guard);		
+  56  105  		cout<<queue_get()<<endl;
+  57  110  		signal(guard);
+  58  112  		signal(pusty);
+  59  114  	}
+  60  115  }
+  61  116  
+  62  116  main() 
+  63  117  {
+  64  117      initialsem(pelny,0);
+  65  120  	initialsem(pusty,5);
+  66  123  	initialsem(guard,1);
+  67  126  	
+  68  126  	cobegin { 
+  69  127               producent1(); producent2(); konsument();  
+  70  136          } 
+  71  137          
+  72  137          cout << "All processes finished" << endl; 
+  73  139  }

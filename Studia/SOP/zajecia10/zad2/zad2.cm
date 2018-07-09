@@ -1,0 +1,90 @@
+binarysem f1;
+binarysem f2;
+binarysem f3;
+binarysem f4;
+binarysem f5;
+
+void filozof1(void) 
+{	
+	int i=1;
+	for(;i<=1000;i++)
+	{
+		cout<<"Jestem filozofem o nr. 1 i mysle."<<endl;
+		wait(f1);
+		wait(f5);
+		cout<<"Jestem filozofem o numerze 1 i najadłem się po raz "<<i<<endl;
+		signal(f1);
+		signal(f5);
+	}
+}
+
+void filozof2(void) 
+{	
+	int x=1;
+	for(;x<=1000;x++)
+	{
+		cout<<"Jestem filozofem o nr. 2 i mysle."<<endl;
+		wait(f2);
+		wait(f1);
+		cout<<"Jestem filozofem o numerze 2 i najadłem się po raz "<<x<<endl;
+		signal(f2);
+		signal(f1);
+	}
+}
+
+void filozof3(void) 
+{	
+	int y=1;
+	for(;y<=1000;y++)
+	{
+		cout<<"Jestem filozofem o nr. 3 i mysle."<<endl;
+		wait(f3);
+		wait(f2);
+		cout<<"Jestem filozofem o numerze 3 i najadłem się po raz "<<y<<endl;
+		signal(f3);
+		signal(f2);
+	}
+}
+
+void filozof4(void) 
+{	
+	int z=1;
+	for(;z<=1000;z++)
+	{
+		cout<<"Jestem filozofem o nr. 4 i mysle."<<endl;
+		wait(f4);
+		wait(f3);
+		cout<<"Jestem filozofem o numerze 4 i najadłem się po raz "<<z<<endl;
+		signal(f4);
+		signal(f3);
+	}
+}
+
+void filozof5(void) 
+{	
+	int c=1;
+	for(;c<=1000;c++)
+	{
+		cout<<"Jestem filozofem o nr. 5 i mysle."<<endl;
+		wait(f5);
+		wait(f4);
+		cout<<"Jestem filozofem o numerze 5 i najadłem się po raz "<<c<<endl;
+		signal(f5);
+		signal(f4);
+	}
+}
+
+main() 
+{
+    initialsem(f1,1);
+	initialsem(f2,1);
+	initialsem(f3,1);
+	initialsem(f4,1);
+	initialsem(f5,1);
+	
+	cobegin { 
+             filozof1(); filozof2(); filozof3(); filozof4(); filozof5();
+        } 
+        
+        cout << "All processes finished" << endl; 
+}

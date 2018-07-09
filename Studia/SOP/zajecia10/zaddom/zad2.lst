@@ -1,0 +1,94 @@
+BACI System: C-- to PCODE Compiler in C, 11:47  23 Oct 2007
+Source file: zad2.cm  Fri Dec 15 12:00:09 2017
+ line  pc
+   1    0  binarysem f1;
+   2    0  binarysem f2;
+   3    0  binarysem f3;
+   4    0  binarysem f4;
+   5    0  binarysem f5;
+   6    0  
+   7    0  void filozof1(void) 
+   8    0  {	
+   9    0  	int i=1;
+  10    3  	for(;i<=1000;i++)
+  11   14  	{
+  12   14  		cout<<"Jestem filozofem o nr. 1 i mysle."<<endl;
+  13   16  		wait(f1);
+  14   18  		wait(f5);
+  15   20  		cout<<"Jestem filozofem o numerze 1 i najadlem sie po raz "<<i<<endl;
+  16   24  		signal(f1);
+  17   26  		signal(f5);
+  18   28  	}
+  19   29  }
+  20   30  
+  21   30  void filozof2(void) 
+  22   30  {	
+  23   30  	int x=1;
+  24   33  	for(;x<=1000;x++)
+  25   44  	{
+  26   44  		cout<<"Jestem filozofem o nr. 2 i mysle."<<endl;
+  27   46  		wait(f1);
+  28   48  		wait(f2);
+  29   50  		cout<<"Jestem filozofem o numerze 2 i najadlem sie po raz "<<x<<endl;
+  30   54  		signal(f1);
+  31   56  		signal(f2);
+  32   58  	}
+  33   59  }
+  34   60  
+  35   60  void filozof3(void) 
+  36   60  {	
+  37   60  	int y=1;
+  38   63  	for(;y<=1000;y++)
+  39   74  	{
+  40   74  		cout<<"Jestem filozofem o nr. 3 i mysle."<<endl;
+  41   76  		wait(f3);
+  42   78  		wait(f2);
+  43   80  		cout<<"Jestem filozofem o numerze 3 i najadlem sie po raz "<<y<<endl;
+  44   84  		signal(f3);
+  45   86  		signal(f2);
+  46   88  	}
+  47   89  }
+  48   90  
+  49   90  void filozof4(void) 
+  50   90  {	
+  51   90  	int z=1;
+  52   93  	for(;z<=1000;z++)
+  53  104  	{
+  54  104  		cout<<"Jestem filozofem o nr. 4 i mysle."<<endl;
+  55  106  		wait(f3);
+  56  108  		wait(f4);
+  57  110  		cout<<"Jestem filozofem o numerze 4 i najadlem sie po raz "<<z<<endl;
+  58  114  		signal(f3);
+  59  116  		signal(f4);
+  60  118  	}
+  61  119  }
+  62  120  
+  63  120  void filozof5(void) 
+  64  120  {	
+  65  120  	int c=1;
+  66  123  	for(;c<=1000;c++)
+  67  134  	{
+  68  134  		cout<<"Jestem filozofem o nr. 5 i mysle."<<endl;
+  69  136  		wait(f5);
+  70  138  		wait(f4);
+  71  140  		cout<<"Jestem filozofem o numerze 5 i najadlem sie po raz "<<c<<endl;
+  72  144  		signal(f5);
+  73  146  		signal(f4);
+  74  148  	}
+  75  149  }
+  76  150  
+  77  150  main() 
+  78  151  {
+  79  151      initialsem(f1,1);
+  80  154  	initialsem(f2,1);
+  81  157  	initialsem(f3,1);
+  82  160  	initialsem(f4,1);
+  83  163  	initialsem(f5,1);
+  84  166  	
+  85  166  
+  86  166  	cobegin { 
+  87  167               filozof1(); filozof2(); filozof3(); filozof4(); filozof5();
+  88  182          } 
+  89  183          
+  90  183          cout << "All processes finished" << endl; 
+  91  185  }
