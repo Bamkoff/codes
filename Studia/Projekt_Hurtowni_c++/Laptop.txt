@@ -1,0 +1,2 @@
+Asus bsd-12 120 17 1200
+Samsung nootebook_s3 150 18 1600

@@ -1,0 +1,52 @@
+# Project: Projekt Hurtowni
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -std=c++11
+CC       = gcc.exe -std=c++11
+WINDRES  = windres.exe
+OBJ      = Drukarka.o Hurtownia.o Laptop.o Magazyn.o Myszka.o PC.o Produkt.o Telefon.o String_to_int.o
+LINKOBJ  = Drukarka.o Hurtownia.o Laptop.o Magazyn.o Myszka.o PC.o Produkt.o Telefon.o String_to_int.o
+LIBS     = -L"c:/software/dev-cpp/MinGW64/lib" -L"c:/software/dev-cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"c:/software/dev-cpp/MinGW64/include" -I"c:/software/dev-cpp/MinGW64/x86_64-w64-mingw32/include" -I"c:/software/dev-cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"c:/software/dev-cpp/MinGW64/include" -I"c:/software/dev-cpp/MinGW64/x86_64-w64-mingw32/include" -I"c:/software/dev-cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"c:/software/dev-cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = "Projekt Hurtowni.exe"
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+Drukarka.o: Drukarka.cpp
+	$(CPP) -c Drukarka.cpp -o Drukarka.o $(CXXFLAGS)
+
+Hurtownia.o: Hurtownia.cpp
+	$(CPP) -c Hurtownia.cpp -o Hurtownia.o $(CXXFLAGS)
+
+Laptop.o: Laptop.cpp
+	$(CPP) -c Laptop.cpp -o Laptop.o $(CXXFLAGS)
+
+Magazyn.o: Magazyn.cpp
+	$(CPP) -c Magazyn.cpp -o Magazyn.o $(CXXFLAGS)
+
+Myszka.o: Myszka.cpp
+	$(CPP) -c Myszka.cpp -o Myszka.o $(CXXFLAGS)
+
+PC.o: PC.cpp
+	$(CPP) -c PC.cpp -o PC.o $(CXXFLAGS)
+
+Produkt.o: Produkt.cpp
+	$(CPP) -c Produkt.cpp -o Produkt.o $(CXXFLAGS)
+
+Telefon.o: Telefon.cpp
+	$(CPP) -c Telefon.cpp -o Telefon.o $(CXXFLAGS)
+
+String_to_int.o: String_to_int.cpp
+	$(CPP) -c String_to_int.cpp -o String_to_int.o $(CXXFLAGS)
