@@ -1,0 +1,49 @@
+Zad. 5a
+-------------------------------------------------------------------------
+1, -2,       6, -5,       7, -3
+1, –2, 2, 2, 2, –5, 3, 3, 1, –3
+       
+Liczbê 6 mo¿na zast¹piæ w ci¹gu przez 2, 2, 2  poniewa¿  6 = 2 + 2 + 2
+     a 7                        przez 3, 3, 1            7 = 3 + 3 + 1
+wiêc w ci¹gu                      ... 2, 2, 2 ... 3, 3, 1
+sumy nie mog¹ byæ wiêksze ni¿     ... +6      ... +7
+
+Zad. 5b algorytm
+-------------------------------------------------------------------------
+1. Liczby z pliku wejœciowego s¹ przepisywane do tablicy t[] .
+   W tablicy t[] jest N liczb (tablica numerowana j = 0..N-1).
+2. Wymiar tablicy mo¿e byæ ustalony na podstawie badania (Cpp lub Excel),
+   w którym pliku wejœciowym jest najwiêcej liczb.
+3. Dla ka¿dej pozycji j w tym ci¹gu liczb obliczam kolejne sumy:
+   su = t[j]
+   su = t[j] + t[j+1]
+   ...
+   su = t[j] + t[j+1] + ... + t[N-1]
+   i za ka¿dym razem sprawdzam, czy kolejna suma jest wiêksza od poprzedniej.
+4. Je¿eli kolejna suma jest wiêksza od poprzedniej,
+   to ustawiam j¹ jako najlepsz¹.
+
+Zad. 5c algorytm
+-------------------------------------------------------------------------
+1. Tablica liczb zosta³a ju¿ pobrana z pliku w punkcie 5b .
+2. Sortujê ci¹g liczb rosn¹co metod¹ quicksort.
+3. Na pocz¹tku zak³adam, ¿e najpopularniejszy jest element t[0], który wystêpuje 1x ,
+   a nastêpnie od pozycji t[1] rozpoczynam zliczanie, ile razy element t[0]
+   wystêpuje w ci¹gu liczb.
+4. Jeœli w ci¹gu liczb, na pozycji j, nastêpuje zmiana liczby na wiêksz¹,
+   to sprawdzam, czy obliczona w³aœnie iloœæ wyst¹pieñ liczby z pozycji [j-1]
+   jest wiêksza od aktualnie najpopularniejszej.
+5. Od pozycji [j+1] rozpoczynam zliczanie iloœci wyst¹pieñ nowej liczby,
+   tak jak opisano w poprzednim punkcie.
+
+Zad. 5c oszacowanie iloœci operacji
+-------------------------------------------------------------------------
+1. W tablicy t[] jest N liczb.
+2. Podczas zliczania czêstoœci wyst¹pieñ poszczególnych liczb
+   przesuwamy siê od pocz¹tku do koñca ci¹gu liczby tylko jeden raz,
+   czyli wykonujemy N-1 porównañ par liczb.
+3. To znaczy, ¿e iloœæ tych operacji wynosi F(N) = N-1 .
+3. Wczeœniej nale¿a³o posortowaæ ci¹g liczb metod¹ quicksort.
+   Z³o¿onoœæ tej metody to O(N * log N)
+4. Razem wykonujemy tyle operacji:
+   F(N) + Fs(N) = (N-1) + (N * log N)

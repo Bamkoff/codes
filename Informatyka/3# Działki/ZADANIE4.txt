@@ -1,0 +1,17 @@
+a)
+Najmniejsza dzia³ka ma powieszchnie 500,18 i rodzaj S
+Najwiêksza dzia³ka ma powieszchnie 1500 i rodzaj X
+
+b)
+Rodzaj	Œrednia		Liczba dzia³ek 
+B	999,59		1775
+L	1016,75		559
+R	989,98		708
+S	986,12		964
+X	989,94		994
+
+c)
+Wielkoœæ Podatku		Liczba Dzia³ek
+do 100 z³ w³¹cznie		2096
+od 100 z³do 500 z³ w³¹cznie 	2133
+ponad 500 z³			771

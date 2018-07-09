@@ -1,0 +1,11 @@
+Najlepsza suma {1, -2, 6, -5, 7, -3}  =  8
+
+Najlepsza suma dla       dane5-1.txt  =  106
+Najpopularniejszy dla    dane5-1.txt  =  -22   2x
+
+Najlepsza suma dla       dane5-2.txt  =  139
+Najpopularniejszy dla    dane5-2.txt  =  -18   9x
+
+Najlepsza suma dla       dane5-3.txt  =  1342
+Najpopularniejszy dla    dane5-3.txt  =  22   227x
+
